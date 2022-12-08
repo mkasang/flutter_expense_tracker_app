@@ -42,7 +42,7 @@ class AddTransactionScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Transaction Image',
+                'Image de la transaction',
                 style: Themes().labelStyle,
               ),
               SizedBox(
@@ -77,13 +77,13 @@ class AddTransactionScreen extends StatelessWidget {
                 height: 8.h,
               ),
               InputField(
-                hint: 'Enter transaction name',
-                label: 'Transaction Name',
+                hint: 'Entrez le nom de la transaction',
+                label: "Nom de l'opération",
                 controller: _nameController,
               ),
               InputField(
-                hint: 'Enter transaction amount',
-                label: 'Transaction Amount',
+                hint: 'Entrez le montant de la transaction',
+                label: 'Montant de la transaction',
                 controller: _amountController,
               ),
               Row(
@@ -111,7 +111,7 @@ class AddTransactionScreen extends StatelessWidget {
                       hint: _addTransactionController.selectedTime.isNotEmpty
                           ? _addTransactionController.selectedTime
                           : DateFormat('hh:mm a').format(now),
-                      label: 'Time',
+                      label: 'Heure',
                       widget: IconButton(
                         onPressed: () => _getTimeFromUser(context),
                         icon: Icon(
@@ -127,7 +127,7 @@ class AddTransactionScreen extends StatelessWidget {
                 hint: _addTransactionController.selectedCategory.isNotEmpty
                     ? _addTransactionController.selectedCategory
                     : categories[0],
-                label: 'Category',
+                label: 'Catégorie',
                 widget: IconButton(
                     onPressed: () => _showDialog(context, true),
                     icon: Icon(
@@ -164,8 +164,8 @@ class AddTransactionScreen extends StatelessWidget {
   _addTransaction() async {
     if (_nameController.text.isEmpty || _amountController.text.isEmpty) {
       Get.snackbar(
-        'Required',
-        'All fields are requried',
+        'Obligatoire',
+        'Tous les champs sont requis',
         backgroundColor:
             Get.isDarkMode ? Color(0xFF212121) : Colors.grey.shade100,
         colorText: pinkClr,
@@ -216,7 +216,7 @@ class AddTransactionScreen extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.all(7),
                       child: Text(
-                        'Galley',
+                        'Gallery',
                         style: TextStyle(
                           fontSize: 20.sp,
                         ),
@@ -253,7 +253,7 @@ class AddTransactionScreen extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.all(7),
                       child: Text(
-                        'Cancel',
+                        'Annuler',
                         style: TextStyle(
                           fontSize: 20.sp,
                         ),
@@ -267,7 +267,7 @@ class AddTransactionScreen extends StatelessWidget {
 
   _showDialog(BuildContext context, bool isCategories) {
     Get.defaultDialog(
-      title: isCategories ? 'Select Category' : 'Select Mode',
+      title: isCategories ? 'Choisir une catégorie' : 'Sélectionnez le mode',
       content: SizedBox(
         width: MediaQuery.of(context).size.width * .7,
         height: MediaQuery.of(context).size.height * .4,
@@ -323,7 +323,7 @@ class AddTransactionScreen extends StatelessWidget {
     return AppBar(
       backgroundColor: Colors.transparent,
       title: Text(
-        'Add Transaction',
+        'Ajouter une transaction',
         style: TextStyle(color: _themeController.color),
       ),
       leading: IconButton(
