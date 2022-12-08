@@ -88,7 +88,7 @@ class _EditTransactionScreenState extends State<EditTransactionScreen> {
                         color: pinkClr,
                       ),
                       label: Text(
-                        'Delete transaction',
+                        "Supprimer l'opération",
                         style: TextStyle(
                           color: pinkClr,
                         ),

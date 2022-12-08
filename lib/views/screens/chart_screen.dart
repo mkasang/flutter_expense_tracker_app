@@ -105,7 +105,7 @@ class ChartScreen extends StatelessWidget {
                       margin: EdgeInsets.only(bottom: 10.h),
                       child: GestureDetector(
                         onTap: () => Get.to(() => AllTransactionsScreen()),
-                        child: Text('Show all transactions,'),
+                        child: Text('Afficher toutes les opérations,'),
                       ),
                     )
                   : SizedBox(),

@@ -53,7 +53,7 @@ class AllTransactionsScreen extends StatelessWidget {
     return AppBar(
       backgroundColor: Colors.transparent,
       title: Text(
-        'All Transactions',
+        'Toutes les transactions',
         style: TextStyle(color: _themeController.color),
       ),
       leading: IconButton(
